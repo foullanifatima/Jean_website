@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+ .container{
+    margin: 1rem 3rem ;
+     
+}
+
+// remove default styling from a and li
+a{
+    all: unset;
+    cursor: pointer;
+ }
+
+
+
+ /// defining colors 
+
+$white: #fff;
+$primary:  #029837;
+$secondry: #F7FFF6;
+$paragraph-color:#000033;
+
+
+
+// styling header
+.header{
+   
+      
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    height: 80px !important;
+    .menu-items{
+        display: flex;
+        gap: 2rem;
+        font-size: 14px;
+        a:hover{
+            color: $primary;
+            cursor: pointer;
+            font-size: 16px;
+
+        }
+    }
+     li{
+        all: unset;
+      }
+}
+
+
+
+// designing component 
+
+.button{
+    background: $primary;
+    color: $white !important;
+    padding: 14px 40px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.button-light{
+    border:  2px solid $primary ;
+    border-radius: 20px;
+    padding: 14px 40px;
+    color: $primary;
+}
+.button-light:hover{
+    @extend .button;
+}
+
+// paragraph
+
+.paragraph{
+    color: rgba(0, 0, 51, 0.95);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+
+.heading-1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 65px;
+    margin-bottom: 10px;
+}
+.heading-2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 52px;
+}
+.heading-3{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 38px;
+    margin-bottom: 10px;
+
+}
+.text-center{
+     text-align: center;
+}
+
+/// Styling images 
+/// 
+/// 
+/// 
+.stylin-list{
+    li{
+        background: url("../assets/check_circle.png") no-repeat left top; /* <-- change `left` & `top` too for extra control */
+        padding: 0px 0px 3px 30px;
+        /* reset styles (optional): */
+        list-style: none;
+        margin: 0;
+    }  
+}
+
+
+/// card design
+/// 
+.card{
+    padding: 44px 34px;
+    max-width: 21rem;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 25px rgba(0, 0, 51, 0.08);
+    border-radius: 20px;
+    .card-content{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        
+        gap: 21px;
+        .card-title{
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            color: $paragraph-color;
+        }
+        .card-paragraph{
+            @extend .paragraph;
+            font-size: 13px;
+        }
+        .card-button{
+            @extend .button-light;
+            padding: 11px 16px;
+            border-radius: 16px;
+        }
+    }
+}
+
+
+/// styling input fileds 
+/// 
+/// 
+.button{
+    border: none;
+}
+
+.input-text {
+    width: 100%;
+    background: #F2F1F1;
+    border-radius: 18px;
+    padding: 16px 34px;
+    border: none;
+  
+}
+.input-text::placeholder{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    color: rgba(107, 114, 128, 0.4);
+}
+
+
+/** designing main section ****/
+
+main{
+    padding-top: 2rem;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    img{
+        width: 100%;
+        
+    }
+    .left-size{
+      .button{
+        margin-top: 44px !important;
+      }
+    }
+}
+
+.offer-section{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $secondry;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    ul{
+        margin-top: 20px;
+    }
+    .button-light{
+        display: inline-block;
+        margin-top: 44px;
+    }
+}
+
+
+.why-choose-us{
+    padding: 100px 0;
+    .paragraph{
+        padding-top: 24px;
+    }
+    .card-container{
+        margin-top: 100px;
+    }
+}
+.testimonial-card{
+    box-shadow: 0px 10px 25px rgba(0, 0, 51, 0.08);
+    border-radius: 20px;
+    max-width: 20rem !important;
+    background: $white;
+    .card-content{
+        padding: 34px 27px;
+        .header-card{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            .left{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 6px;
+                h2{
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 13px;
+                    line-height: 20px;
+                }
+                
+                p{
+                    
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 200;
+                    font-size: 13px;
+                    line-height: 20px;
+
+                }
+            }
+            .right{
+               display: flex;
+               align-items: center;
+            }
+         
+
+        }
+        .paragraph{
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 26px;
+            margin-top: 22px;
+
+        }
+    }
+
+}
+
+
+.box {
+    margin: 0 40px 0 40px;
+}
+
+
+.testimonials{
+    padding: 90px 0 160px 0;
+    background: $secondry;
+    .card-testimonials-container{
+        padding-top: 80px;
+    }
+}
+
+.subscribe{
+    padding: 100px 0 150px 0;
+    .input-container{
+        padding-top: 70px;
+        .button{
+            margin-top: 50px;
+        }
+    }
+    .paragraph{
+        padding-top: 20px;
+    }
+}
+
+
+/// styling about page
+/// 
+
+
+.about-main{
+    p{
+        padding-top: 20px;
+      
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.book-appointment{
+    padding: 140px 330px;
+    background: $secondry;
+    a{
+        margin-top: 56px;
+    }
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+textarea{
+    width:  100%;
+    background: #F2F1F1 !important;
+    border-radius: 18px !important;
+    padding: 28px 28px !important;
+    border: none;
+   
+}
+
+
+
+.group-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    top: 40px;
+}
+
+
+.hamburger-menu{
+    width: 40px;
+    height: fit-content;
+    display: none;
+}
+@media only screen and (max-width: 900px) {
+    .menu-items{
+        display: none !important;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+    .space{
+        margin: 40px 0 !important;
+    }
+    .card-container{
+        gap: 2rem;
+    }
+    .center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-testimonials-container{
+        gap: 20px;
+        .testimonial-card{
+            min-width: 18rem !important ;
+        }
+    }
+    
+    
+      
+       
+    
+    .book-appointment{
+        padding: 2rem 2rem !important;
+    }
+
+    .footer-box{
+        .row{
+            gap: 5rem !important;
+
+        }
+       
+        .first-col{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+}
+
+
+
+
+// styling footer 
+
+.footer{
+    background:#000033;
+    color: white;
+    left: 0;
+    bottom: 0 !important;
+    right: 0;
+    .footer-box{
+        
+        padding: 60px;
+    }
+    .footer-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        li{
+            list-style: none;
+        }
+
+    }
+    li{
+        font-family: 'Mulish' !important;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    p{
+        @extend li;
+    }
+}
