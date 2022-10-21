@@ -33,6 +33,14 @@ a {
   cursor: pointer;
   font-size: 16px;
 }
+.header #humberger_menu {
+  max-width: 2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: none;
+  cursor: pointer;
+}
 .header li, .header .footer p, .footer .header p {
   all: unset;
 }
@@ -327,11 +335,59 @@ textarea {
   display: none;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 2rem;
+}
+
+li, .footer p {
+  all: unset;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+.block {
+  display: block;
+}
+
 @media only screen and (max-width: 900px) {
-  .menu-items {
-    display: none !important;
+  .none {
+    display: none;
   }
-  .hamburger-menu {
+  nav {
+    position: absolute;
+    float: right;
+    display: none;
+    right: 0;
+    background-color: white;
+    height: 80%;
+    top: 80px;
+    width: 100vw;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20% 0;
+    gap: 2rem;
+  }
+  #humberger_menu {
+    display: block !important;
+  }
+  li, .footer p {
     display: block;
   }
   .space {

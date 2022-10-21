@@ -1,17 +1,20 @@
 
-const btn = document.getElementById("button");
 
-const form = document.getElementById('form');
+const humberger_menu = document.getElementById("humberger_menu");
 
+humberger_menu.addEventListener("click", ()=>{
+    let nav = document.getElementById("nav");
 
-
-
-btn.addEventListener("click", function(e) {
-    e.preventDefault();
-
-    [name, email, message] = [...form.elements].map((item)=>item.value);
-    console.log(name, email , message);
-
-    // sending form content using smtp
-});
+    if(nav.classList.contains("none")){
+        nav.classList.remove("none");
+        nav.classList.add("block");
+    }
+    else{
+        nav.classList.add("none");
+    }
+    
+   
+}
+   
+);
 
